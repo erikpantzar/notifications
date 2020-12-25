@@ -9,7 +9,6 @@ const Notification = ({ label, time, expiry, id, type }) => {
   const noteEl = useRef(null)
 
   const doRemove = () => {
-    console.log(noteEl)
     setExpired(true)
   }
 
@@ -21,16 +20,14 @@ const Notification = ({ label, time, expiry, id, type }) => {
       onAnimationEnd={(event) => {
         if (event.target.classList.contains(styles.end)) {
           removeNotification(id)
-        } else {
         }
       }}
     >
+      <button onClick={doRemove}>Remove</button>
       {label}
       {time}
 
       {time < expiry && "Expired"}
-
-      <button onClick={doRemove}>Remove</button>
     </div>
   )
 }

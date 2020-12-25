@@ -39,8 +39,7 @@
 }
 
 .end {
-  animation: ending 300ms ease-out;
-  transition: margin-top 100ms ease-in;
+  animation: ending 90ms ease-in;
+  transition: margin-top 90ms ease-in;
   margin-top: -40px;
-  height: 0px;
 }
